@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div th:fragment="navigation">
+      <!-- TOP NAV -->
+      <div class="top-nav" id="home">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-auto">
+              <p> <i class='bx bxs-envelope'></i> info@example.com</p>
+              <p> <i class='bx bxs-phone-call'></i> +1 9287 032 230</p>
+            </div>
+            <div class="col-auto social-icons">
+              <a href="#"><i class='bx bxl-facebook'></i></a>
+              <a href="#"><i class='bx bxl-twitter'></i></a>
+              <a href="#"><i class='bx bxl-instagram'></i></a>
+              <a href="#"><i class='bx bxl-pinterest'></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM NAV -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+            <div class="container">
+                <a th:href="@{/}">
+                     <div>
+                        <img style="width:40px; height:40px;" th:src="@{./img/logowhite.png}"><a class="navbar-brand" href="#">Noah Ark Immunology Corp<span class="dot">.</span></a>
+                     </div>
+                </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/about}">About</a>
+              </li>
+            </ul>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+               class="btn btn-brand ms-lg-3">Contact</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#LogineModal"
+                 class="btn btn-primary ms-lg-3">Login</a>
+          </div>
+        </div>
+      </nav>
+  </div>
+</body>
+</html>
