@@ -11,8 +11,18 @@ public class main {
         return "index";
     }
 
+    @GetMapping("/dashboard")
+    public String dashboardPage(){
+        return "dashboard/index";
+    }
+
     @GetMapping("/about")
     public String about(){
         return "about";
+    }
+
+    @GetMapping("/login")
+    public String login(){
+        return "login";
     }
 }

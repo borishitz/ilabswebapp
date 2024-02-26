@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="headerLinks :: headerLinks"></head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+<div th:replace="navigation :: navigation "></div>
+
+        <div class="modal fade" id="exampleModal">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-body p-0">
+                        <div class="container-fluid">
+                            <div class="row gy-4">
+                                <div class="col-lg-4 col-sm-12 bg-cover"
+                                     style="background-image: url(img/c2.jpg); min-height:300px;">
+                                    <div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+<!--                                success massage to be displayed -->
+                                    <div>
+                                        <div th:if="${param.success}">
+                                            <p>Registration Successful, please check your email to completed registration!</p>
+                                        </div>
+                                    </div>
+                                    <form class="p-lg-5 col-12 row g-3">
+                                        <div>
+                                            <h1>User Registration Form</h1>
+<!--                                            <p></p>-->
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="userName" class="form-label">First name</label>
+                                            <input type="text" class="form-control" placeholder="Jon" id="userName" th:field="*{firstName}"
+                                                   aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="userName" class="form-label">Last name</label>
+                                            <input type="text" th:field="*{lastName}" class="form-control" placeholder="Doe" id="userNam">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="userName" class="form-label">Email address</label>
+                                            <input type="email" th:field="*{email}" class="form-control" placeholder="Johndoe@example.com" id="userNa">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Password</label>
+                                            <input name="" th:field="*{password}" placeholder="******"
+                                                      class="form-control" id=""/>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-brand">Register</button>
+                                            <span>Registered already <a th:href="@{/authenticate/login-form}">Login Here.</a></span>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+<!--    this is the footer section -->
+<div th:replace="footer :: footer "></div>
+</body>
+</html>
