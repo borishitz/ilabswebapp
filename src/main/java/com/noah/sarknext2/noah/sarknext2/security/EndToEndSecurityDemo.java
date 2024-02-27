@@ -23,7 +23,7 @@ public class EndToEndSecurityDemo {
         return http.csrf().disable()
 
                 .authorizeHttpRequests()
-                .requestMatchers("/","/registration/**","/login","/dashboard", "/about","/css/**","/img/**","/js/**", "/dashboardAssets/**").permitAll()
+                .requestMatchers("/","/registration/**","/login","/dashboard", "/about","/css/**","/img/**","/js/**", "/dashboardAssets/**", "/contact/save").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
