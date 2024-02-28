@@ -7,8 +7,8 @@
 
 <div th:replace="navigation :: navigation "></div>
 
-        <div class="modal fade" id="exampleModal">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="card">
+            <div class="">
                 <div class="modal-content">
                     <div class="modal-body p-0">
                         <div class="container-fluid">
@@ -26,7 +26,7 @@
                                             <p>Registration Successful, please check your email to completed registration!</p>
                                         </div>
                                     </div>
-                                    <form class="p-lg-5 col-12 row g-3">
+                                    <form th:action="@{/register}" th:object="${user}" class="p-lg-5 col-12 row g-3" method="post">
                                         <div>
                                             <h1>User Registration Form</h1>
 <!--                                            <p></p>-->
@@ -50,10 +50,9 @@
                                                       class="form-control" id=""/>
                                         </div>
 
-                                        <div class="col-12">
-                                            <button type="submit" class="btn btn-brand">Register</button>
-                                            <span>Registered already <a th:href="@{/authenticate/login-form}">Login Here.</a></span>
-
+                                        <div class="col-12 pb-5">
+                                            <button type="submit" class="btn btn-brand mr-4">Register</button>
+                                            <span class="">Registered already <a th:href="@{/login}">Login</a></span>
                                         </div>
                                     </form>
                                 </div>
@@ -64,6 +63,66 @@
                 </div>
             </div>
         </div>
+
+        <section class="bg-light" id="reviews">
+
+    <div class="owl-theme owl-carousel reviews-slider container">
+        <div class="review">
+            <div class="person">
+                <img src="img/team_1.jpg" alt="">
+                <h5>Ralph Edwards</h5>
+                <small>Lorem ipsum dolor sit amet</small>
+            </div>
+            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quis, rem culpa labore voluptate
+                ullam! In, nostrum. Dicta, vero nihil. Delectus minus vitae rerum voluptatum, excepturi incidunt ut,
+                enim nam exercitationem optio ducimus!</h3>
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class="bx bxs-star-half"></i>
+            </div>
+            <i class='bx bxs-quote-alt-left'></i>
+        </div>
+        <div class="review">
+            <div class="person">
+                <img src="img/team_2.jpg" alt="">
+                <h5>Ralph Edwards</h5>
+                <small>Lorem ipsum dolor sit amet</small>
+            </div>
+            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quis, rem culpa labore voluptate
+                ullam! In, nostrum. Dicta, vero nihil. Delectus minus vitae rerum voluptatum, excepturi incidunt ut,
+                enim nam exercitationem optio ducimus!</h3>
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class="bx bxs-star-half"></i>
+            </div>
+            <i class='bx bxs-quote-alt-left'></i>
+        </div>
+        <div class="review">
+            <div class="person">
+                <img src="img/team_3.jpg" alt="">
+                <h5>Ralph Edwards</h5>
+                <small>Lorem ipsum dolor sit amet</small>
+            </div>
+            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut quis, rem culpa labore voluptate
+                ullam! In, nostrum. Dicta, vero nihil. Delectus minus vitae rerum voluptatum, excepturi incidunt ut,
+                enim nam exercitationem optio ducimus!</h3>
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class="bx bxs-star-half"></i>
+            </div>
+            <i class='bx bxs-quote-alt-left'></i>
+        </div>
+    </div>
+</section>
 
 <!--    this is the footer section -->
 <div th:replace="footer :: footer "></div>

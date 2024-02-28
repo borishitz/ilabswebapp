@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/registration")
 public class RegistrationController {
     private final IUserService userService;
     private final ApplicationEventPublisher publisher;
@@ -25,14 +24,12 @@ public class RegistrationController {
         return "registration";
     }
 
-
-
     @PostMapping("/register")
     public String registerUser(@ModelAttribute("user") RegistrationRequest registration){
         User user = userService.registerUser(registration);
         // Public verification email
         publisher.publishEvent(new RegistrationCompleteEvent(user, ""));
-        return "redirect:/registration/registration-form?success";
+        return "redirect:/registration-form?success";
     }
 
 }

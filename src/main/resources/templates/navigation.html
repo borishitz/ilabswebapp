@@ -2,7 +2,8 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Noah's Ark Cpanel</title>
+    <head th:replace="headerLinks :: headerLinks"></head>
 </head>
 <body>
   <div th:fragment="navigation">
@@ -45,9 +46,9 @@
                 <a class="nav-link" th:href="@{/about}">About</a>
               </li>
             </ul>
-            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            <a th:href="@{/contact}"
                class="btn btn-brand ms-lg-3">Contact</a>
-            <a href="#" data-bs-toggle="modal" data-bs-target="#LogineModal"
+            <a th:href="@{/login}"
                  class="btn btn-primary ms-lg-3">Login</a>
           </div>
         </div>

@@ -11,10 +11,15 @@ import java.util.List;
 public class main {
 
     @GetMapping("/")
+    public String home(){
+        return "index";
+    }
+
+    @GetMapping("/contact")
     public String home(Model model){
         Contact contact = new Contact();
         model.addAttribute("newContact", contact);
-        return "index";
+        return "contact";
     }
 
     public String dashboardPage(){
