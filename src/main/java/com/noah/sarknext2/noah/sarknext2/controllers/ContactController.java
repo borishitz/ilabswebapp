@@ -1,6 +1,6 @@
 package com.noah.sarknext2.noah.sarknext2.controllers;
 
-import com.noah.sarknext2.noah.sarknext2.entity.Contact;
+import com.noah.sarknext2.noah.sarknext2.domain.Contact;
 import com.noah.sarknext2.noah.sarknext2.repository.ContactRepository;
 import com.noah.sarknext2.noah.sarknext2.services.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +13,7 @@ import java.util.List;
 
 @Controller
 public class ContactController {
-    @Autowired
-    private ContactRepository contactRepo;
+
     @Autowired
     private ContactService contactService;
 
@@ -24,7 +23,6 @@ public class ContactController {
         model.addAttribute("allContacts", contacts);
         return "dashboard/index";
     }
-
 
     @GetMapping("/contact/add")
     public String addContact(Model model){

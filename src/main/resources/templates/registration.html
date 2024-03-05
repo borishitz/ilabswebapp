@@ -22,27 +22,27 @@
                                 <div class="col-lg-8">
 <!--                                success massage to be displayed -->
                                     <div>
-                                        <div th:if="${param.success}">
-                                            <p>Registration Successful, please check your email to completed registration!</p>
-                                        </div>
+<!--                                        <div th:if="${param.success}">-->
+<!--                                            <p>Registration Successful, please check your email to completed registration!</p>-->
+<!--                                        </div>-->
                                     </div>
-                                    <form th:action="@{/register}" th:object="${user}" class="p-lg-5 col-12 row g-3" method="post">
+                                    <form th:action="@{/register}" th:object="${newUser}" class="p-lg-5 col-12 row g-3" method="post">
                                         <div>
                                             <h1>User Registration Form</h1>
 <!--                                            <p></p>-->
                                         </div>
                                         <div class="col-lg-6">
-                                            <label for="userName" class="form-label">First name</label>
-                                            <input type="text" class="form-control" placeholder="Jon" id="userName" th:field="*{firstName}"
+                                            <label for="firstName" class="form-label">First name</label>
+                                            <input type="text" class="form-control" placeholder="Jon" id="firstName" th:field="*{firstName}"
                                                    aria-describedby="emailHelp">
                                         </div>
                                         <div class="col-lg-6">
-                                            <label for="userName" class="form-label">Last name</label>
-                                            <input type="text" th:field="*{lastName}" class="form-control" placeholder="Doe" id="userNam">
+                                            <label for="lastName" class="form-label">Last name</label>
+                                            <input type="text" th:field="*{lastName}" class="form-control" placeholder="Doe" id="lastName">
                                         </div>
                                         <div class="col-12">
-                                            <label for="userName" class="form-label">Email address</label>
-                                            <input type="email" th:field="*{email}" class="form-control" placeholder="Johndoe@example.com" id="userNa">
+                                            <label for="username" class="form-label">Email address</label>
+                                            <input type="email" th:field="*{username}" class="form-control" placeholder="Johndoe@example.com" id="username">
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label">Password</label>

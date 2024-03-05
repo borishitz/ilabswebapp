@@ -1,7 +1,7 @@
 package com.noah.sarknext2.noah.sarknext2.services;
 
 
-import com.noah.sarknext2.noah.sarknext2.entity.Contact;
+import com.noah.sarknext2.noah.sarknext2.domain.Contact;
 import com.noah.sarknext2.noah.sarknext2.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
